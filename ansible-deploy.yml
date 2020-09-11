@@ -5,6 +5,3 @@
 
   - name: create a service
     command: kubectl apply -f service.yml
-
-  - name: create a ingres nginx
-    command: kubectl apply -f ingres-nginx.yml
