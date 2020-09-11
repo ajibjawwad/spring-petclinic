@@ -22,7 +22,7 @@ pipeline {
 
         stage('Docker Build'){
             steps{
-              sh 'docker build -t jebro/webstore-app:1.0 .'
+              sh 'docker build -t jebro/webstore:1.0 .'
             }
         }
 
@@ -31,7 +31,7 @@ pipeline {
               withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')]) {
                 sh "docker login -u jebro -p ${dockerpwd}"
               }
-              sh 'docker push jebro/webstore-app:1.0'
+              sh 'docker push jebro/webstore:1.0'
             }
         }
 
