@@ -31,7 +31,7 @@ pipeline {
               withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')]) {
                 sh "docker login -u jebro -p ${dockerpwd}"
               }
-              sh 'docker push jebro/webstore-apps:1.0'
+              sh 'docker push jebro/webstore-app:1.0'
             }
         }
 
