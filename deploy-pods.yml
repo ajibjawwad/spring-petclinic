@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: jebro/webstore:1.0:1.0
+        image: jebro/webstore:1.0
         ports:
         - containerPort: 8080
