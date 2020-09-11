@@ -6,6 +6,6 @@ RUN mkdir -p /usr/local/apps
 
 WORKDIR /usr/local/apps
 
-COPY target/*.jar /usr/local/apps
+COPY /target/spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar /usr/local/apps
 
 ENTRYPOINT ["java", "-jar", "spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar"]
