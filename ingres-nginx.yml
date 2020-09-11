@@ -1,0 +1,29 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1beta1
+metadata:
+  name: java-deployment
+  namespace: ajibjawwad
+  selfLink: /apis/networking.k8s.io/v1beta1/namespaces/ajibjawwad/ingresses/java-deployment
+  uid: c026b904-db2e-474c-a061-35f728d920e6
+  resourceVersion: "742322836"
+  generation: 1
+  creationTimestamp: 2020-09-11T07:07:29Z
+  labels:
+    app: myapp
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    certmanager.k8s.io/cluster-issuer: kubesail-letsencrypt
+spec:
+  tls:
+    - hosts:
+        - java-deployment.ajibjawwad.usw1.kubesail.org
+      secretName: java-deployment-ingress
+  rules:
+    - host: java-deployment.ajibjawwad.usw1.kubesail.org
+      http:
+        paths:
+          - backend:
+              serviceName: java-svc
+              servicePort: 8080
+status:
+  loadBalancer: {}
