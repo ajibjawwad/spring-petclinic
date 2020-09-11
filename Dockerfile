@@ -8,4 +8,4 @@ WORKDIR /usr/local/apps
 
 COPY target/*.jar /usr/local/apps
 
-ENTRYPOINT ["java", "-jar", "/usr/local/apps/*.jar"]
+ENTRYPOINT ["java", "-jar", "spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar"]
